@@ -1,9 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://cc87rd220r7p6"]
+[gd_scene load_steps=11 format=3 uid="uid://cc87rd220r7p6"]
 
+[ext_resource type="Texture2D" uid="uid://cv253wj76orhs" path="res://sprites/bg/back.png" id="1_ddtdk"]
 [ext_resource type="Texture2D" uid="uid://djfcfjx16peb6" path="res://sprites/tilemaps/monochrome_tilemap_transparent_packed.png" id="1_vifa6"]
 [ext_resource type="PackedScene" uid="uid://q4tw3eknqfag" path="res://scenes/prefabs/player.tscn" id="2_1dcjd"]
 [ext_resource type="Texture2D" uid="uid://cinuf83rkjqp1" path="res://sprites/tilemaps/tileset-2.png" id="2_eu0jh"]
-[ext_resource type="Texture2D" uid="uid://dkv5k0osxr2ci" path="res://sprites/tilemaps/tileset.png" id="3_mbnhn"]
+[ext_resource type="Texture2D" uid="uid://bbwv1shabgehn" path="res://sprites/tilemaps/tileset.png" id="3_mbnhn"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_2afbw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cjs8j"]
 texture = ExtResource("1_vifa6")
@@ -558,7 +561,13 @@ sources/2 = SubResource("TileSetAtlasSource_o7j7d")
 sources/3 = SubResource("TileSetAtlasSource_k2tm7")
 
 [node name="World" type="Node2D"]
-scale = Vector2(4, 4)
+position = Vector2(0, 60)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(150, 50)
+scale = Vector2(310, 260)
+mesh = SubResource("QuadMesh_2afbw")
+texture = ExtResource("1_ddtdk")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(0.25, 0)
@@ -569,8 +578,9 @@ layer_0/tile_data = PackedInt32Array(589824, 65539, 4, 589825, 65539, 4, 589826,
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2(0.25, 0)
-polygon = PackedVector2Array(2.25, 155, 2.25, 175, 189.75, 175, 189.75, 145, 2.25, 145)
+polygon = PackedVector2Array(-0.25, 175, 320, 176, 320, 144, 0, 144)
 
 [node name="Player" parent="." instance=ExtResource("2_1dcjd")]
 position = Vector2(32, 144)
+speed = 75.0
+jump_force = 250.0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbwv1shabgehn"
-path="res://.godot/imported/tileset.png-05411aeee5e5169a89fb0d2535677b4f.ctex"
+uid="uid://mm8ngu40sj7d"
+path="res://.godot/imported/cone_light.png-0c2f1dc74bd5b4a43956497a64a9c3a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/tilemaps/tileset.png"
-dest_files=["res://.godot/imported/tileset.png-05411aeee5e5169a89fb0d2535677b4f.ctex"]
+source_file="res://sprites/cone_light.png"
+dest_files=["res://.godot/imported/cone_light.png-0c2f1dc74bd5b4a43956497a64a9c3a5.ctex"]
 
 [params]
 
