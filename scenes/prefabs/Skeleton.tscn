@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bn42e6n3gfng7"]
+
+[ext_resource type="Texture2D" uid="uid://1n146lwontvk" path="res://sprites/enemies/skeleton/skeleton-idle1.png" id="1_40i0i"]
+[ext_resource type="PackedScene" uid="uid://byhro5klpownd" path="res://scenes/prefabs/heath_component.tscn" id="2_sbsya"]
+
+[node name="Skeleton" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_40i0i")
+
+[node name="health_component" parent="." instance=ExtResource("2_sbsya")]

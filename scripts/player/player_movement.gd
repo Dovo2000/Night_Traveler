@@ -7,7 +7,8 @@ extends CharacterBody2D
 
 @onready var ap: AnimationPlayer = $AnimationPlayer
 @onready var sprite: Sprite2D = $Sprite2D
-@onready var player_light_position: Node2D = $Node2D
+@onready var player_light_position: Node2D = $Lantern
+@onready var camera: Camera2D = $Camera2D
 
 func _physics_process(delta):
 	apply_gravity(delta) # apply gravity to the player
